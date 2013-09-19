@@ -1,0 +1,67 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias vi="vim -u NONE"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+COMPLETION_WAITING_DOTS="true"
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+
+ZSH_THEME=estrai
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git zsh-syntax-highlighting vi-mode cpanm gem perl rbenv gitfast knife )
+
+
+LS_COLORS='no=00:fi=00:di=04;40;33:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.tar.gz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.fig=01;35:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:*.aac=01;35:*Makefile=01;33:*.C=01;33:*.cpp=01;33:*.cc=01;33:*.c=01;33:*.for=01;33:*.h=01;33:*.tcl=01;33:*.py=01;33:*.sh=01;33:*.o=33:*.so=33:*README=01;37;41:*Readme=01;37;41:*readme=01;37;41:*.tex=01;37;40:*.dvi=01;37;40:*.ppt=01;37;40:*.pptx=01;37;40:*.doc=01;37;40:*.docx=01;37;40:*.xls=01;37;40:*.xlsx=01;37;40:*.ps=01;37;40:*.eps=01;37;40:*.pdf=01;37;40:*.txt=01;37;40:*.htm=01;37;40:*.xml=01;37;40:*.pot=01;37;40:*.nb=01;37;40:*.spe=32:*.spn=32:*.sec=32:*.asc=32:*.mat=32:*.spc=32:*.Spc=32:*.root=32:*.gf2=32:*.gf3=32:*.dat=01;04;35:*.evt=01;04;35:*.bin=01;04;35:*~=36:*.bak=36:*.tmp=36:*#=36:';
+export LS_COLORS
+
+export DISABLE_AUTO_UPDATE="true"
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+
+# bind ↑ to search history backward
+bindkey '\e[A' history-beginning-search-backward
+# bind ↓ to search history forward
+bindkey '\e[B' history-beginning-search-forward
+# ctrl-r
+bindkey "^R" history-incremental-search-backward
+# ctrl-f
+bindkey "^F" history-incremental-search-forward
+# ctrl-a
+bindkey "^A" beginning-of-line
+# ctrl-e
+bindkey "^E" end-of-line
+
+export TERM=rxvt
+
+export PATH=$HOME/perl5/perlbrew/bin:$HOME/perl5/perlbrew/perls/perl-blead/bin:/home/estrai/.rbenv/shims:/home/estrai/bin:/Applications/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11/bin:/home/estrai/bin:/Application/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/estrai/.rbenv/bin

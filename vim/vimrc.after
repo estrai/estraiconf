@@ -1,0 +1,14 @@
+nnoremap <c-t> :<C-U>CtrlP<CR>
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set wrap linebreak textwidth=0
+set textwidth=0
+
+
+let g:solarized_termcolors=256
+set t_Co=16
+set background=dark
+colorscheme rdark
+set foldmethod=syntax
