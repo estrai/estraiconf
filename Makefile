@@ -28,5 +28,10 @@ all:
 	rm -f $(HOME)/.vimrc.after
 	ln -s $(PWD)/vim/vimrc.after $(HOME)/.vimrc.after
 
+	# top
+
+	rm -f $(HOME)/.toprc
+	ln -s $(PWD)/toprc $(HOME)/.toprc
+
 
 
