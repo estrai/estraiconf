@@ -1,18 +1,17 @@
 all:
-	# zsh
-	
-	rm -f $(HOME)/.oh-my-zsh
-	ln -s $(PWD)/zsh/oh-my-zsh $(HOME)/.oh-my-zsh
 
+	# zsh
+
+	rm -f $(HOME)/.oh-my-zsh
 	rm -f $(HOME)/.zshrc
+	ln -s $(PWD)/zsh/oh-my-zsh $(HOME)/.oh-my-zsh
 	ln -s $(PWD)/zsh/zshrc $(HOME)/.zshrc
 
 	rm -f $(HOME)/.zshenv
 	ln -s $(PWD)/zsh/zshenv $(HOME)/.zshenv
 
-	rm -fr $(HOME)/oh-my-zsh
-	mkdir -p $(HOME)/oh-my-zsh/custom/themes
-	cp $(PWD)/zsh/estrai.zsh-theme $(HOME)/oh-my-zsh/custom/themes/
+	mkdir -p $(HOME)/.oh-my-zsh/custom/themes
+	cp $(PWD)/zsh/estrai.zsh-theme $(HOME)/.oh-my-zsh/custom/themes/
 
 	# vim
 
