@@ -33,9 +33,15 @@ fi
 export PATH
 export EDITOR=vim
 
-eval "$(rbenv init -)"
+if (( $+commands[rbenv] )); then
+    eval "$(rbenv init -)"
+fi
 
-[[ -s ~/perl5/perlbrew/etc/bashrc ]] && source ~/perl5/perlbrew/etc/bashrc
+if [[ -s ~/perl5/perlbrew/etc/bashrc ]]; then
+    source ~/perl5/perlbrew/etc/bashrc
+fi
 
-eval $(keychain --eval --agents ssh -Q --quiet id_dsa_snowman id_rsa_git_gitlab_venda id_rsa_git_venda id_rsa)
-
+if (( $+commands[keychain] )) ; then
+    # TODO will need host related conditions here..
+    eval $(keychain --eval --agents ssh -Q --quiet id_dsa_snowman id_rsa_git_gitlab_venda id_rsa_git_venda id_rsa)
+fi
