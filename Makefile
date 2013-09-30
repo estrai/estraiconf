@@ -33,5 +33,8 @@ all:
 	rm -f $(HOME)/.toprc
 	ln -s $(PWD)/toprc $(HOME)/.toprc
 
-
+	# tmux
+	
+	rm -f $(HOME)/.tmux.conf
+	ln -s $(PWD)/tmux.conf $(HOME)/.tmux.conf
 
