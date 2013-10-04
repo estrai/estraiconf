@@ -1,40 +1,36 @@
+DEST=$(PWD)/out
+
 all:
+
+	rm -fr $(DEST)
+	mkdir $(DEST)
 
 	# zsh
 
-	rm -f $(HOME)/.oh-my-zsh
-	rm -f $(HOME)/.zshrc
-	ln -s $(PWD)/zsh/oh-my-zsh $(HOME)/.oh-my-zsh
-	ln -s $(PWD)/zsh/zshrc $(HOME)/.zshrc
+	cp -r $(PWD)/zsh/oh-my-zsh $(DEST)/.oh-my-zsh
+	cp -r $(PWD)/zsh/zshrc $(DEST)/.zshrc
 
-	rm -f $(HOME)/.zshenv
-	ln -s $(PWD)/zsh/zshenv $(HOME)/.zshenv
+	cp -r $(PWD)/zsh/zshenv $(DEST)/.zshenv
 
-	mkdir -p $(HOME)/.oh-my-zsh/custom/themes
-	cp $(PWD)/zsh/estrai.zsh-theme $(HOME)/.oh-my-zsh/custom/themes/
+	mkdir -p $(DEST)/.oh-my-zsh/custom/themes
+	cp $(PWD)/zsh/estrai.zsh-theme $(DEST)/.oh-my-zsh/custom/themes/
 
 	# vim
-
-	rm -f $(HOME)/.vimrc
-
 	# janus
-	rm -fr $(HOME)/.vim
-	ln -s $(PWD)/vim/janus $(HOME)/.vim
-	( cd $(HOME)/.vim && rake )
+	
+	cp -r $(PWD)/vim/janus $(DEST)/.vim
+	( cd $(DEST)/.vim && rake )
 
-	rm -f $(HOME)/.vimrc.before
-	ln -s $(PWD)/vim/vimrc.before $(HOME)/.vimrc.before
+	cp -r $(PWD)/vim/vimrc.before $(DEST)/.vimrc.before
 
-	rm -f $(HOME)/.vimrc.after
-	ln -s $(PWD)/vim/vimrc.after $(HOME)/.vimrc.after
+	cp -r $(PWD)/vim/vimrc.after $(DEST)/.vimrc.after
 
 	# top
 
-	rm -f $(HOME)/.toprc
-	ln -s $(PWD)/toprc $(HOME)/.toprc
+	cp  $(PWD)/toprc $(DEST)/.toprc
 
 	# tmux
-	
-	rm -f $(HOME)/.tmux.conf
-	ln -s $(PWD)/tmux.conf $(HOME)/.tmux.conf
+
+	cp -r $(PWD)/tmux/tmuxrc $(DEST)/.tmux
+	cp $(DEST)/.tmux/tmux.conf $(DEST)/.tmux.conf
 
