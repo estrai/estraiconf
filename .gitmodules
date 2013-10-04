@@ -4,3 +4,6 @@
 [submodule "vim/janus"]
 	path = vim/janus
 	url = git@github.com:carlhuda/janus.git
+[submodule "tmux/tmuxrc"]
+	path = tmux/tmuxrc
+	url = git://github.com/yesmeck/tmuxrc.git
